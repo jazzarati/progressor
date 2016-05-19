@@ -27,17 +27,28 @@ class Project extends React.Component {
 
   trigger(event) {
     switch (event.type) {
+      case 'QUEST_CREATED':
+        this.loadProject()
+        break
       default:
         console.log(`Unknown event: ${event.type}`)
     }
   }
 
   render() {
-    return(
-      <div className="container">
-
-      </div>
-    )
+    if (this.state.project !== undefined) {
+      return(
+        <div className="container">
+          <h4>{this.state.project.name}</h4>
+          <Quests store={this.state} />
+        </div>
+      )
+    } else {
+      return(
+        <div className="container">
+        </div>
+      )
+    }
   }
 }
 
