@@ -14,7 +14,15 @@ Shows progress
   - Register
 - Copy Client Id (as GITHUB_CLIENT_ID) and Client Secret (as GITHUB_CLIENT_SECRET) into .env
 
+.env file
+```
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+```
+
 #### Install
 - bundle install
 - bundle exec rake db:create db:migrate
+
+#### Run
 - bundle exec rails s
