@@ -24,7 +24,8 @@ class ProjectsController < ApplicationController
       {
         id: @project.id,
         name: @project.name,
-        quests: @project.quests
+        quests: @project.quests,
+        monsters: @project.monsters
       }.to_json
     end
 

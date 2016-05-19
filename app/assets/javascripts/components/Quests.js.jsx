@@ -1,9 +1,9 @@
 class Quests extends React.Component {
   renderQuest(quest) {
     return (
-      <tr>
-        <td key={`quest-list-${quest.id}`}>
-          {quest.description} 
+      <tr key={`quest-list-${quest.id}`}>
+        <td>
+          {quest.description}
           <span className="label label-success pull-right">{quest.points} points</span>
         </td>
       </tr>

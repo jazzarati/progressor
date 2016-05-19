@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get '/dashboard' => 'welcome#dashboard'
     resources :projects do
       resources :quests
+      resources :monsters
     end
   end
   # Example of regular route:

@@ -1,8 +1,8 @@
 class ProjectList extends React.Component {
   renderProject(project) {
     return (
-      <tr>
-        <td key={`project-list-${project.id}`}><a href={`projects/${project.id}`}>{project.name}</a></td>
+      <tr key={`project-list-${project.id}`}>
+        <td><a href={`projects/${project.id}`}>{project.name}</a></td>
       </tr>
     )
   }

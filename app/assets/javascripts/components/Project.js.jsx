@@ -30,6 +30,9 @@ class Project extends React.Component {
       case 'QUEST_CREATED':
         this.loadProject()
         break
+      case 'MONSTER_CREATED':
+        this.loadProject()
+        break
       default:
         console.log(`Unknown event: ${event.type}`)
     }
@@ -43,6 +46,7 @@ class Project extends React.Component {
             <h2>{this.state.project.name}</h2>
           </div>
           <Quests store={this.state} trigger={this.trigger.bind(this)}/>
+          <Monsters store={this.state} trigger={this.trigger.bind(this)}/>
         </div>
       )
     } else {
