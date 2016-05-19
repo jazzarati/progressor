@@ -33,13 +33,17 @@ class CreateProject extends React.Component {
 
   render() {
     return(
-      <div>
-        <h4>Create Project</h4>
-        <form>
-          <label>Name</label>
-          <input type="text" value={this.state.name} onChange={this.updateName.bind(this)} />
-          <input type="submit" onClick={this.createProject.bind(this)} />
-        </form>
+      <div className="container-fluid">
+        <div className="row">
+          <h4>Create Project</h4>
+          <form className="form-inline">
+            <div className="form-group">
+              <label className="control-label">Name</label>
+              <input type="text" className="form-control" value={this.state.name} onChange={this.updateName.bind(this)} />
+              <button type="submit" className="btn btn-primary" onClick={this.createProject.bind(this)}>Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
