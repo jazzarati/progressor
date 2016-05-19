@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       user = github_user(:user)
       unless User.exists?(github_id: user.id)
         User.create(github_username: user.login, github_id: user.id)
-        redirect_to users_dashboard_path
+        redirect_to dashboard_path
       end
     end
   end
