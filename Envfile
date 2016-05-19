@@ -1,0 +1,5 @@
+enable_defaults! { !Rails.env.production? }
+
+variable :GITHUB_REDIRECT_URL,          :string,  default: 'http://localhost:3000/users/dashboard'
+variable :GITHUB_CLIENT_ID,             :string
+variable :GITHUB_CLIENT_SECRET,         :string
