@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'users/logout' => 'users#logout'
   github_authenticate do
     get '/dashboard' => 'welcome#dashboard'
-    resources :projects
+    resources :projects do
+      resources :quests
+    end
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

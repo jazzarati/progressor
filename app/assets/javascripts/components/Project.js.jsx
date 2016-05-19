@@ -40,7 +40,7 @@ class Project extends React.Component {
       return(
         <div className="container">
           <h4>{this.state.project.name}</h4>
-          <Quests store={this.state} />
+          <Quests store={this.state} trigger={this.trigger.bind(this)}/>
         </div>
       )
     } else {
