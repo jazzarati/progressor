@@ -35,14 +35,20 @@ class CreateProject extends React.Component {
     return(
       <div className="container-fluid">
         <div className="row">
-          <h4>Create Project</h4>
-          <form className="form-inline">
-            <div className="form-group create-project">
-              <label>Name</label>
-              <input type="text" className="form-control" value={this.state.name} onChange={this.updateName.bind(this)} />
-              <button type="submit" className="btn btn-primary" onClick={this.createProject.bind(this)}>Submit</button>
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h4 className="panel-title">Create Project</h4>
             </div>
-          </form>
+            <div className="panel-body">
+              <form className="form-inline">
+                <div className="form-group create-project">
+                  <label>Name</label>
+                  <input type="text" className="form-control" value={this.state.name} onChange={this.updateName.bind(this)} />
+                  <button type="submit" className="btn btn-primary" onClick={this.createProject.bind(this)}>Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     )

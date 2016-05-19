@@ -39,7 +39,9 @@ class Project extends React.Component {
     if (this.state.project !== undefined) {
       return(
         <div className="container">
-          <h4>{this.state.project.name}</h4>
+          <div className="page-header">
+            <h2>{this.state.project.name}</h2>
+          </div>
           <Quests store={this.state} trigger={this.trigger.bind(this)}/>
         </div>
       )

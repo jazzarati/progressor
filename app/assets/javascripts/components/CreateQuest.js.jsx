@@ -43,16 +43,22 @@ class CreateQuest extends React.Component {
     return(
       <div className="container-fluid">
         <div className="row">
-          <h4>Create Quest</h4>
-          <form className="form">
-            <div className="form-group create-quest">
-              <label>Description</label>
-              <input type="text" className="form-control" value={this.state.description} onChange={this.updateDescription.bind(this)} />
-              <label>Points</label>
-              <input type="text" className="form-control" value={this.state.points} onChange={this.updatePoints.bind(this)} />
-              <button type="submit" className="btn btn-primary" onClick={this.createQuest.bind(this)}>Submit</button>
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h4 className="panel-title">Create Quests</h4>
             </div>
-          </form>
+            <div className="panel-body">
+              <form className="form">
+                <div className="form-group create-quest">
+                  <label>Description</label>
+                  <input type="text" className="form-control" value={this.state.description} onChange={this.updateDescription.bind(this)} />
+                  <label>Points</label>
+                  <input type="text" className="form-control" value={this.state.points} onChange={this.updatePoints.bind(this)} />
+                  <button type="submit" className="btn btn-primary" onClick={this.createQuest.bind(this)}>Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     )
