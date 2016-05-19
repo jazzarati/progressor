@@ -6,10 +6,12 @@ class ApplicationController < ActionController::Base
   before_action :create_user_unless_exists
 
   def create_user_unless_exists
-    user = github_user(:user)
-    unless User.exists?(github_id: user.id)
-      User.create(github_username: user.login, github_id: user.id)
-      redirect_to users_dashboard_path
+    if github_authenticated?
+      user = github_user(:user)
+      unless User.exists?(github_id: user.id)
+        User.create(github_username: user.login, github_id: user.id)
+        redirect_to users_dashboard_path
+      end
     end
   end
 end
