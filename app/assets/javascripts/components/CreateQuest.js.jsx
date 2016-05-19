@@ -41,15 +41,19 @@ class CreateQuest extends React.Component {
 
   render() {
     return(
-      <div>
-        <h4>Create Quest</h4>
-        <form>
-          <label>Description</label>
-          <input type="text" value={this.state.description} onChange={this.updateDescription.bind(this)} />
-          <label>Points</label>
-          <input type="text" value={this.state.points} onChange={this.updatePoints.bind(this)} />
-          <input type="submit" onClick={this.createQuest.bind(this)} />
-        </form>
+      <div className="container-fluid">
+        <div className="row">
+          <h4>Create Quest</h4>
+          <form className="form">
+            <div className="form-group create-quest">
+              <label>Description</label>
+              <input type="text" className="form-control" value={this.state.description} onChange={this.updateDescription.bind(this)} />
+              <label>Points</label>
+              <input type="text" className="form-control" value={this.state.points} onChange={this.updatePoints.bind(this)} />
+              <button type="submit" className="btn btn-primary" onClick={this.createQuest.bind(this)}>Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }

@@ -1,3 +1,11 @@
-.form-group label,input{
-   margin: 0px 5px 0px 0px;
+.create-project label, .create-project input, .create-project button{
+   margin: 5px 5px 0px 0px;
+}
+
+.create-quest label, .create-quest input{
+   margin: 5px 0px 0px 0px;
+}
+
+.create-quest button{
+   margin: 10px 0px 0px 0px;
 }
