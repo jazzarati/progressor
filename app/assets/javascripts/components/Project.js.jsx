@@ -28,8 +28,7 @@ class Project extends React.Component {
   trigger(event) {
     switch (event.type) {
       case 'QUEST_CREATED':
-        this.loadProject()
-        break
+      case 'QUEST_COMPLETED':
       case 'MONSTER_CREATED':
         this.loadProject()
         break

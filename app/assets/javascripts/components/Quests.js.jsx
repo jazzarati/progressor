@@ -1,12 +1,7 @@
 class Quests extends React.Component {
   renderQuest(quest) {
     return (
-      <tr key={`quest-list-${quest.id}`}>
-        <td>
-          {quest.description}
-          <span className="label label-success pull-right">{quest.points} points</span>
-        </td>
-      </tr>
+      <QuestRow key={`quest-list-${quest.id}`} store={this.props.store} quest={quest} trigger={this.props.trigger} />
     )
   }
 

@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   github_authenticate do
     get '/dashboard' => 'welcome#dashboard'
     resources :projects do
-      resources :quests
-      resources :monsters
+      resources :quests, :monsters do
+        member do
+          put :complete
+        end
+      end
     end
   end
   # Example of regular route:

@@ -16,4 +16,11 @@ class QuestsController < ApplicationController
     quest = Quest.create(quest_params)
     render json: quest
   end
+
+  def complete
+    completor = Services::Complete.new(Quest.find(params[:id]))
+    completor.perform
+
+    render json: completor.result
+  end
 end

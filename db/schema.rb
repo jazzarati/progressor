@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519121217) do
+ActiveRecord::Schema.define(version: 20160520001817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "monsters", force: :cascade do |t|
-    t.string  "classification", null: false
-    t.string  "description",    null: false
-    t.integer "points",         null: false
-    t.integer "project_id",     null: false
+    t.string   "classification", null: false
+    t.string   "description",    null: false
+    t.integer  "points",         null: false
+    t.integer  "project_id",     null: false
+    t.datetime "completed_at"
   end
 
   add_index "monsters", ["project_id"], name: "index_monsters_on_project_id", using: :btree
@@ -30,9 +31,10 @@ ActiveRecord::Schema.define(version: 20160519121217) do
   end
 
   create_table "quests", force: :cascade do |t|
-    t.string  "description", null: false
-    t.integer "points",      null: false
-    t.integer "project_id",  null: false
+    t.string   "description",  null: false
+    t.integer  "points",       null: false
+    t.integer  "project_id",   null: false
+    t.datetime "completed_at"
   end
 
   add_index "quests", ["project_id"], name: "index_quests_on_project_id", using: :btree
