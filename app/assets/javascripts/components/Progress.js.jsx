@@ -19,7 +19,7 @@ class Progress extends React.Component {
     }
     return (
       <div>
-        <div className="col-sm-10">
+        <div className="col-xs-10">
           <div className="progress">
             <div className="progress-bar progress-bar-info" role="progressbar" aria-valuenow={this.points()} aria-valuemin="0" aria-valuemax={max} style={ { width: percent() + '%' } }>
               { `${points} / ${max}` }
@@ -27,7 +27,7 @@ class Progress extends React.Component {
             </div>
           </div>
         </div>
-        <div className="col-sm-2 text-right">
+        <div className="col-xs-2 text-right">
           {totalPoints}
         </div>
       </div>
