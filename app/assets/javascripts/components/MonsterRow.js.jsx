@@ -22,7 +22,7 @@ class MonsterRow extends React.Component {
 
     if (is_complete()) {
       return (
-        <tr>
+        <tr className="completed">
           <td>
             <span>{this.props.monster.description} is complete</span>
             <span className="badge">{this.props.monster.classification}</span>

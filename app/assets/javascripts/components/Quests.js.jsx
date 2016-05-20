@@ -20,7 +20,7 @@ class Quests extends React.Component {
     let showLabel = ''
     let quests = this.props.store.project.quests
 
-    sortOnCompleted = (a,b) => {
+    const sortOnCompleted = (a,b) => {
       if (a.completed_at === null && b.completed_at === null || a.completed_at !== null && b.completed_at !== null) {
         return 0
       } else if (a.completed_at === null && b.completed_at !== null) {
@@ -32,7 +32,7 @@ class Quests extends React.Component {
       }
     }
 
-    completedFilter = (quest) => {
+    const completedFilter = (quest) => {
       if (quest.completed_at !== null) { return this.state.showCompleted } else { return true }
     }
 
