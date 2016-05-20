@@ -25,17 +25,17 @@ class QuestRow extends React.Component {
         <tr className="completed">
           <td>
             {this.props.quest.description}
-            <span className="label label-success pull-right">{this.props.quest.points} points</span>
+            <span className="label label-info pull-right">{this.props.quest.points} points</span>
           </td>
         </tr>
       )
     } else {
       return (
         <tr>
-          <td>
-            {this.props.quest.description}
-            <span className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</span>
-            <span className="label label-success pull-right">{this.props.quest.points} points</span>
+          <td className="ongoing">
+            <div>{this.props.quest.description}</div>
+            <div className="label label-info pull-left">{this.props.quest.points} points</div>
+            <div className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete Quest</div>
           </td>
         </tr>
       )

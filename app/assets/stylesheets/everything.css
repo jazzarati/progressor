@@ -94,3 +94,16 @@ tr.completed {
 .create-monster button{
    margin: 10px 0px 0px 0px;
 }
+
+.current-quests h4{
+	display:inline;
+}
+
+.current-quests .badge{
+	margin: 0px;
+}
+
+.current-quests .ongoing .label{
+	margin: 10px 0px;
+	font-size: 90%;
+}

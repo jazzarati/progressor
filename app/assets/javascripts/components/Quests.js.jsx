@@ -45,12 +45,15 @@ class Quests extends React.Component {
     }
 
     return (
-      <div className="container-fluid">
+      <div className="container-fluid current-quests">
         <div className="row">
             <table className="table table-striped table-bordered">
               <thead>
                 <tr>
-                  <th><h4>Current Quests</h4><span className="badge pull-right" onClick={this.toggleCompleted.bind(this)}>{showLabel}</span></th>
+                  <th>
+                    <h4>Current Quests</h4>
+                    <span className="badge pull-right" onClick={this.toggleCompleted.bind(this)}>{showLabel}</span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
