@@ -2,7 +2,8 @@ class Project extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      project: undefined
+      project: undefined,
+      requiredPointsForLevel: 100
     }
   }
 

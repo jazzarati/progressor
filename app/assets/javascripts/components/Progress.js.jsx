@@ -11,15 +11,24 @@ class Progress extends React.Component {
   }
 
   render() {
-    const max = 100
+    const max = this.props.store.requiredPointsForLevel
+    const points = this.points() % max
+    const totalPoints = this.points()
     const percent = () => {
-      return Math.min(100, Math.round(this.points() / max * 100))
+      return Math.min(100, Math.round(points / max * 100))
     }
     return (
-      <div className="progress">
-        <div className="progress-bar progress-bar-info" role="progressbar" aria-valuenow={this.points()} aria-valuemin="0" aria-valuemax={max} style={ { width: percent() + '%' } }>
-          { `${this.points()} / ${max}` }
-          <span className="sr-only">{this.points()} Complete</span>
+      <div>
+        <div className="col-sm-10">
+          <div className="progress">
+            <div className="progress-bar progress-bar-info" role="progressbar" aria-valuenow={this.points()} aria-valuemin="0" aria-valuemax={max} style={ { width: percent() + '%' } }>
+              { `${points} / ${max}` }
+              <span className="sr-only">{points} Complete</span>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-2 text-right">
+          {totalPoints}
         </div>
       </div>
     )
