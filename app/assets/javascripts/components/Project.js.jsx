@@ -45,8 +45,10 @@ class Project extends React.Component {
           <div className="page-header">
             <h2>{this.state.project.name}</h2>
           </div>
-          <Quests store={this.state} trigger={this.trigger.bind(this)}/>
-          <Monsters store={this.state} trigger={this.trigger.bind(this)}/>
+          <div className="row">
+            <div className="col-md-6"><Quests store={this.state} trigger={this.trigger.bind(this)}/></div>
+            <div className="col-md-6"><Monsters store={this.state} trigger={this.trigger.bind(this)}/></div>
+          </div>
         </div>
       )
     } else {

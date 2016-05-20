@@ -1,5 +1,9 @@
+.badge {
+	margin: 0px 10px;
+}
+
 .create-project label, .create-project input, .create-project button{
-   margin: 5px 5px 0px 0px;
+   margin: 5px 10px 0px 0px;
 }
 
 .create-quest label, .create-quest input{
@@ -7,5 +11,13 @@
 }
 
 .create-quest button{
+   margin: 10px 0px 0px 0px;
+}
+
+.create-monster label, .create-monster input, .create-monster select{
+   margin: 5px 0px 0px 0px;
+}
+
+.create-monster button{
    margin: 10px 0px 0px 0px;
 }

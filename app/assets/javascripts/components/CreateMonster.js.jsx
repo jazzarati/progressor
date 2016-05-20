@@ -61,7 +61,7 @@ class CreateMonster extends React.Component {
               <form className="form">
                 <div className="form-group create-monster">
                   <label>Classification</label>
-                  <select onChange={this.updateClassification.bind(this)} value={this.state.classification}>
+                  <select className="form-control" onChange={this.updateClassification.bind(this)} value={this.state.classification}>
                     <option value="boss">Boss</option>
                     <option value="minion">Minion</option>
                   </select>

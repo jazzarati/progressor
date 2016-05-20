@@ -3,8 +3,8 @@ class Monsters extends React.Component {
     return (
       <tr key={`monster-list-${monster.id}`}>
         <td>
-          <span className="label pull-left">{monster.classification}</span>
-          {monster.description}
+          <span>{monster.description}</span>
+          <span className="badge">{monster.classification}</span>
           <span className="label label-success pull-right">{monster.points} points</span>
         </td>
       </tr>
