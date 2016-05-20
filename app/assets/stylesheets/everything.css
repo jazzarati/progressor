@@ -67,6 +67,14 @@ body {
 	background-color: #ffffff;
 }
 
+.table-striped>tbody>tr:nth-of-type(odd).completed {
+  text-decoration: line-through;
+}
+
+tr.completed {
+  text-decoration: line-through;
+}
+
 .create-project label, .create-project input, .create-project button{
    margin: 5px 10px 0px 0px;
 }

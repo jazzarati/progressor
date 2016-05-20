@@ -11,7 +11,7 @@ class Progress extends React.Component {
   }
 
   render() {
-    const max = 1000
+    const max = 100
     const percent = () => {
       return Math.min(100, Math.round(this.points() / max * 100))
     }

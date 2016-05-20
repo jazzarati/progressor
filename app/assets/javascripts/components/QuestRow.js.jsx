@@ -22,9 +22,9 @@ class QuestRow extends React.Component {
 
     if (is_complete()) {
       return (
-        <tr>
+        <tr className="completed">
           <td>
-            {`${this.props.quest.description} is complete`}
+            {this.props.quest.description}
             <span className="label label-success pull-right">{this.props.quest.points} points</span>
           </td>
         </tr>
