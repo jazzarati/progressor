@@ -35,7 +35,8 @@ class QuestRow extends React.Component {
           <td className="ongoing">
             <div>{this.props.quest.description}</div>
             <div className="label label-info pull-left">{this.props.quest.points} points</div>
-            <div className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete Quest</div>
+            <div className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</div>
+            <div className="btn btn-danger pull-right">Remove</div>
           </td>
         </tr>
       )
