@@ -17,6 +17,24 @@ class MonsterRow extends React.Component {
     )
   }
 
+  delete() {
+    $.ajax(
+      {
+        url: `/projects/${this.props.store.project.id}/monsters/${this.props.monster.id}`,
+        dataType: 'JSON',
+        contentType: 'application/json; charset=UTF-8',
+        method: 'delete'
+      })
+      .success((results) => {
+        this.props.trigger({type: 'MONSTER_DELETED'})
+      })
+      .fail((something) => {
+        console.log('fail')
+        console.log(something)
+      }
+    )
+  }
+
   render() {
     const is_complete = () => { return this.props.monster.completed_at !== null }
 
@@ -37,7 +55,7 @@ class MonsterRow extends React.Component {
             <span>{this.props.monster.description}</span>
             <span className="badge">{this.props.monster.classification}</span>
             <span className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</span>
-            <div className="btn btn-danger pull-right">Remove</div>
+            <div className="btn btn-danger pull-right" onClick={this.delete.bind(this)}>Remove</div>
             <span className="label label-success pull-right">{this.props.monster.points} points</span>
           </td>
         </tr>

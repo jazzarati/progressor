@@ -30,8 +30,10 @@ class Project extends React.Component {
     switch (event.type) {
       case 'QUEST_CREATED':
       case 'QUEST_COMPLETED':
+      case 'QUEST_DELETED':
       case 'MONSTER_CREATED':
       case 'MONSTER_COMPLETED':
+      case 'MONSTER_DELETED':
         this.loadProject()
         break
       default:

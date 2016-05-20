@@ -17,6 +17,24 @@ class QuestRow extends React.Component {
     )
   }
 
+  delete() {
+    $.ajax(
+      {
+        url: `/projects/${this.props.store.project.id}/quests/${this.props.quest.id}`,
+        dataType: 'JSON',
+        contentType: 'application/json; charset=UTF-8',
+        method: 'delete'
+      })
+      .success((results) => {
+        this.props.trigger({type: 'QUEST_DELETED'})
+      })
+      .fail((something) => {
+        console.log('fail')
+        console.log(something)
+      }
+    )
+  }
+
   render() {
     const is_complete = () => { return this.props.quest.completed_at !== null }
 
@@ -36,7 +54,7 @@ class QuestRow extends React.Component {
             <div>{this.props.quest.description}</div>
             <div className="label label-info pull-left">{this.props.quest.points} points</div>
             <div className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</div>
-            <div className="btn btn-danger pull-right">Remove</div>
+            <div className="btn btn-danger pull-right" onClick={this.delete.bind(this)}>Remove</div>
           </td>
         </tr>
       )

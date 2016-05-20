@@ -9,6 +9,11 @@ class MonstersController < ApplicationController
     respond_with Monster.find(params[:id])
   end
 
+  def destroy
+    Monster.delete(params[:id])
+    render json: {}
+  end
+
   def create
     monster_params = params.require(:monster).permit(:description, :points, :classification)
     monster_params[:project_id] = params[:project_id]

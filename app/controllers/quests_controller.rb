@@ -9,6 +9,11 @@ class QuestsController < ApplicationController
     respond_with Quest.find(params[:id])
   end
 
+  def destroy
+    Quest.delete(params[:id])
+    render json: {}
+  end
+
   def create
     quest_params = params.require(:quest).permit(:description, :points)
     quest_params[:project_id] = params[:project_id]
