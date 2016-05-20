@@ -35,11 +35,7 @@ class CreateMonster extends React.Component {
         data: JSON.stringify({ description: this.state.description, points: this.state.points, classification: this.state.classification })
       })
       .success((results) => {
-        this.setState({
-          description: '',
-          points: '',
-          classification: ''
-        })
+        this.setState(intialState())
         this.props.trigger({type: 'MONSTER_CREATED'})
       })
       .fail((something) => {
@@ -71,7 +67,7 @@ class CreateMonster extends React.Component {
                   <input type="text" className="form-control" value={this.state.points} onChange={this.updatePoints.bind(this)} />
                   <button type="submit" className="btn btn-primary" onClick={this.createMonster.bind(this)}>Submit</button>
                 </div>
-              </form>            
+              </form>
             </div>
           </div>
         </div>
