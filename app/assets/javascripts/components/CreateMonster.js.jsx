@@ -35,7 +35,7 @@ class CreateMonster extends React.Component {
         data: JSON.stringify({ description: this.state.description, points: this.state.points, classification: this.state.classification })
       })
       .success((results) => {
-        this.setState(intialState())
+        this.setState(this.intialState())
         this.props.trigger({type: 'MONSTER_CREATED'})
       })
       .fail((something) => {
