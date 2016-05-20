@@ -22,7 +22,7 @@ class QuestRow extends React.Component {
 
     if (is_complete()) {
       return (
-        <tr key={`quest-list-${this.props.quest.id}`}>
+        <tr>
           <td>
             {`${this.props.quest.description} is complete`}
             <span className="label label-success pull-right">{this.props.quest.points} points</span>
@@ -31,7 +31,7 @@ class QuestRow extends React.Component {
       )
     } else {
       return (
-        <tr key={`quest-list-${this.props.quest.id}`}>
+        <tr>
           <td>
             {this.props.quest.description}
             <span className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</span>

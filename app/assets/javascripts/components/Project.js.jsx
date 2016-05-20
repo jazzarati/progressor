@@ -30,6 +30,7 @@ class Project extends React.Component {
       case 'QUEST_CREATED':
       case 'QUEST_COMPLETED':
       case 'MONSTER_CREATED':
+      case 'MONSTER_COMPLETED':
         this.loadProject()
         break
       default:

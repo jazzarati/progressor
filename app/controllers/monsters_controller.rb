@@ -16,4 +16,11 @@ class MonstersController < ApplicationController
     monster = Monster.create(monster_params)
     render json: monster
   end
+
+  def complete
+    completor = Services::Complete.new(Monster.find(params[:id]))
+    completor.perform
+
+    render json: completor.result
+  end
 end

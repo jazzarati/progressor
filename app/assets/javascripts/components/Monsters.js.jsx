@@ -1,13 +1,7 @@
 class Monsters extends React.Component {
   renderMonster(monster) {
     return (
-      <tr key={`monster-list-${monster.id}`}>
-        <td>
-          <span>{monster.description}</span>
-          <span className="badge">{monster.classification}</span>
-          <span className="label label-success pull-right">{monster.points} points</span>
-        </td>
-      </tr>
+      <MonsterRow key={`monster-list-${monster.id}`} store={this.props.store} monster={monster} trigger={this.props.trigger} />
     )
   }
 
