@@ -37,6 +37,7 @@ class MonsterRow extends React.Component {
             <span>{this.props.monster.description}</span>
             <span className="badge">{this.props.monster.classification}</span>
             <span className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</span>
+            <div className="btn btn-danger pull-right">Remove</div>
             <span className="label label-success pull-right">{this.props.monster.points} points</span>
           </td>
         </tr>
