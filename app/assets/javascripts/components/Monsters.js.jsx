@@ -37,15 +37,15 @@ class Monsters extends React.Component {
     }
 
     if (this.state.showCompleted) {
-      showLabel = 'Hide Completed'
+      showLabel = 'Hide Defeated'
       monsters = monsters.sort(sortOnCompleted)
     } else {
-      showLabel = 'Show Completed'
+      showLabel = 'Show Defeated'
       monsters = monsters.filter(completedFilter)
     }
 
     return (
-      <div className="container-fluid">
+      <div className="container-fluid current-monsters">
         <div>
           <MonsterArena monsters={this.props.store.project.monsters} />
           <table className="table table-striped table-bordered">

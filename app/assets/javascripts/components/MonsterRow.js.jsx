@@ -43,20 +43,20 @@ class MonsterRow extends React.Component {
         <tr className="completed">
           <td>
             <span>{this.props.monster.description} is complete</span>
-            <span className="badge">{this.props.monster.classification}</span>
-            <span className="label label-success pull-right">{this.props.monster.points} points</span>
+            <span className="label label-info pull-right">{this.props.monster.points} points</span>
+            <span className="label label-default pull-right">{this.props.monster.classification}</span>
           </td>
         </tr>
       )
     } else {
       return (
-        <tr>
+        <tr className="ongoing">
           <td>
-            <span>{this.props.monster.description}</span>
-            <span className="badge">{this.props.monster.classification}</span>
-            <span className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Complete</span>
+            <div>{this.props.monster.description}</div>
+            <div className="label label-default pull-left">{this.props.monster.classification}</div>
+            <div className="label label-info pull-left">{this.props.monster.points} points</div>
+            <div className="btn btn-success pull-right" onClick={this.complete.bind(this)}>Defeat</div>
             <div className="btn btn-danger pull-right" onClick={this.delete.bind(this)}>Remove</div>
-            <span className="label label-success pull-right">{this.props.monster.points} points</span>
           </td>
         </tr>
       )
