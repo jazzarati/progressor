@@ -1,5 +1,70 @@
+body {
+	background-color: #4ABDAC;
+}
+
+.quest-block {
+	background-color: #F7B733;
+	padding: 15px;
+	border-left: 10px solid #4ABDAC;
+	border-right: 10px solid #4ABDAC;
+}
+
+.monster-block {
+	background-color: #FC4A1A;
+	padding: 15px;
+	border-left: 10px solid #4ABDAC;
+	border-right: 10px solid #4ABDAC;
+}
+
+.monster_arena{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*outline: 1px dotted black;*/
+    padding: 10px;
+    text-align: center;
+}
+
+.big_monster_holder{
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 500px;
+    min-height: 200px;
+    position: relative;
+    /*outline:1px dotted red;*/
+    overflow: hidden;
+    display: inline-block;
+}
+
+.big_monster_image{
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
+.small_monster_holder{
+    max-width: 200px;
+    min-width: 100px;
+    max-height: 300px;
+    min-height: 200px;
+    position: relative;
+    /*outline:1px dotted red;*/
+    overflow: hidden;
+    display: inline-block;
+}
+
+.small_monster_image{
+    width: 100%;
+    height: 100%;
+    position:relative;
+}
+
 .badge {
 	margin: 0px 10px;
+}
+
+.table {
+	background-color: #ffffff;
 }
 
 .create-project label, .create-project input, .create-project button{

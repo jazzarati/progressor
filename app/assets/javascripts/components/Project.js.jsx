@@ -49,8 +49,8 @@ class Project extends React.Component {
             <Progress store={this.state} />
           </div>
           <div className="row">
-            <div className="col-md-6"><Quests store={this.state} trigger={this.trigger.bind(this)}/></div>
-            <div className="col-md-6"><Monsters store={this.state} trigger={this.trigger.bind(this)}/></div>
+            <div className="col-md-4 quest-block"><Quests store={this.state} trigger={this.trigger.bind(this)}/></div>
+            <div className="col-md-8 monster-block"><Monsters store={this.state} trigger={this.trigger.bind(this)}/></div>
           </div>
         </div>
       )

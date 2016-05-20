@@ -8,7 +8,17 @@ class Monsters extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="row">
+        <div>
+          <div className="monster_arena"> 
+            <div className="big_monster_holder">
+                <img src="/images/big_monster.png" className="img-responsive" alt="Responsive image"/>
+            </div>
+          </div>
+          <div className="monster_arena"> 
+            <div className="small_monster_holder">
+                <img src="/images/small-monster-1.png" className="img-responsive" alt="Responsive image"/>
+            </div>
+          </div>
             <table className="table table-striped table-bordered">
               <thead>
                 <tr>

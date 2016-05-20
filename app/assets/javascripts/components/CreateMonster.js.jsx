@@ -71,7 +71,7 @@ class CreateMonster extends React.Component {
                   <input type="text" className="form-control" value={this.state.points} onChange={this.updatePoints.bind(this)} />
                   <button type="submit" className="btn btn-primary" onClick={this.createMonster.bind(this)}>Submit</button>
                 </div>
-              </form>
+              </form>            
             </div>
           </div>
         </div>
